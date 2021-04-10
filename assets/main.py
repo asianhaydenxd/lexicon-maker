@@ -1,5 +1,5 @@
 def save(txt):
-    with open('py/lexiconMaker/saves/' + txt + '.txt', 'w') as lexicon:
+    with open('lexicon-maker/assets/saves/' + txt + '.txt', 'w') as lexicon:
         for i in lex:
             lexicon.write(i + ':' + lex[i] + '\n')
 
