@@ -9,13 +9,13 @@ txt = input('File: ')
 lex = {}
 
 try:
-    with open('py/lexiconMaker/saves/' + txt + '.txt', 'r') as lexicon:
+    with open('lexicon-maker/assets/saves/' + txt + '.txt', 'r') as lexicon:
         for i in lexicon.readlines():
             param = i.split(':')
             lex[param[0]] = param[1]
             lex[param[0]] = lex[param[0]].replace('\n','')
 except:
-    open('py/lexiconMaker/saves/' + txt + '.txt', 'x')
+    open('lexicon-maker/assets/saves/' + txt + '.txt', 'x')
 
 while True:
     x = input('> ')
@@ -31,7 +31,7 @@ while True:
         for i in lex:
             print(i + ':' + lex[i])
     elif x[0] == 'read':
-        with open('py/lexiconMaker/saves/' + txt + '.txt', 'r') as lexicon:
+        with open('lexicon-maker/assets/saves/' + txt + '.txt', 'r') as lexicon:
             print(''.join(lexicon.readlines()))
     elif x[0] == 'write':
         lex[x[1]] = ''.join(x[2:])
